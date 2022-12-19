@@ -53,13 +53,20 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.14.0</version>
         </dependency>
-
+<!--        mapper-->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>1.5.3.Final</version>
         </dependency>
 
+<!--        liquibase-->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+        </dependency>
+
+<!--        springfox-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -76,6 +83,7 @@
             <artifactId>springfox-bean-validators</artifactId>
             <version>2.9.2</version>
         </dependency>
+
 
     </dependencies>
 
@@ -105,12 +113,6 @@
                             <version>1.4.2.Final</version>
                         </path>
                     </annotationProcessorPaths>
-                    <!--                        <excludes>-->
-                    <!--                            <exclude>-->
-                    <!--                                <groupId>org.projectlombok</groupId>-->
-                    <!--                                <artifactId>lombok</artifactId>-->
-                    <!--                            </exclude>-->
-                    <!--                        </excludes>-->
                 </configuration>
             </plugin>
         </plugins>

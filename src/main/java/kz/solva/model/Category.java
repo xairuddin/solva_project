@@ -12,7 +12,9 @@ import java.util.List;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
+    @Column(name = "category_name")
     String category_name;
 
     @OneToMany(mappedBy = "categoryOwner")

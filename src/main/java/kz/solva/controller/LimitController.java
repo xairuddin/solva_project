@@ -4,6 +4,9 @@ import io.swagger.annotations.Api;
 import kz.solva.dto.LimitDto;
 import kz.solva.model.Limit;
 import kz.solva.service.LimitService;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +24,7 @@ public class LimitController {
         this.limitService = limitService;
     }
 
+
     @PostMapping("/newLimit")
     public ResponseEntity<Limit> newLimit(@RequestBody LimitDto limitDto) {
         return ResponseEntity.ok(limitService.newLimit(limitDto));
@@ -35,7 +39,7 @@ public class LimitController {
     public List<Limit> getLimitsByAccount(@PathVariable Long account_from) {
         return limitService.findLimitsByAccount(account_from);
     }
-    @GetMapping("/getLimitsByAccount/{account_from}/{category}")
+    @GetMapping("/getLimitsByAccountAndCategory/{account_from}/{category}")
     public List<Limit> getLimitsByAccountAndCategory(@PathVariable Long account_from, @PathVariable String category) {
         return limitService.findLimitByAccount_fromAndExpense_category(account_from,category);
     }
