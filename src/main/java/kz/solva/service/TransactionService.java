@@ -101,7 +101,5 @@ public class TransactionService {
     public List<Transaction> getAllLimitedTransactionsByAccount(Long account) {
         return transactionRepository.findAllLimitedTransactionsByAccount(account);
     }
-
-
 }
 

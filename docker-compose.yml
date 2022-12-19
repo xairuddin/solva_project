@@ -1,0 +1,27 @@
+version: "3"
+services:
+  springboot-app:
+    image: springboot-app
+    restart: always
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      POSTGRES_HOST: solva
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_PORT: 5432
+  solvadb:
+    container_name: solva
+    image: postgres
+    volumes:
+      - /home/user/Desktop/db:/var/lib/mysql
+    ports:
+      - 5477:5432
+    environment:
+      POSTGRES_DB: solva
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+
+
+

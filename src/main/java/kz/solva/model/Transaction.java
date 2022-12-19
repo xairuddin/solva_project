@@ -1,6 +1,6 @@
 package kz.solva.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.util.Date;

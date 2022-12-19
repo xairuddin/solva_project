@@ -1,1 +1,0 @@
-package kz.solva.config;
