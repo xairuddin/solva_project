@@ -15,6 +15,8 @@ To Run
     Create the database using pgadmin (or other app tool).
     Configure the data in application.yml.
     Finally,Run the project in the development environment.
+ 
 
 Open your browser and enter following URL : http://localhost:8080/swagger-ui.html
+Before checking other controllers make a request to exchange controller. (In our case  USD/KZT and USD/RUB)
 
